@@ -1,0 +1,158 @@
+import React from "react";
+import { CheckCircle, Award, Users, Briefcase } from "lucide-react";
+
+export default function About() {
+  return (
+    <div>
+      <div className="bg-gradient-to-r from-green-600 to-green-800 py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-white text-center">
+            Tentang Kami
+          </h1>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Sejarah SMK Nusantara
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Didirikan pada tahun 1985, SMK Nusantara telah berkembang menjadi
+              salah satu lembaga pendidikan kejuruan terkemuka di Indonesia.
+              Dengan komitmen untuk menghasilkan lulusan yang berkualitas dan
+              siap kerja, kami terus berinovasi dalam metode pembelajaran dan
+              fasilitas pendidikan.
+            </p>
+            <p className="text-gray-600">
+              Selama lebih dari 35 tahun, kami telah menghasilkan ribuan alumni
+              yang kini berkarir sukses di berbagai sektor industri, baik di
+              dalam maupun luar negeri.
+            </p>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Sekolah"
+              className="rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-4xl font-bold text-green-600 mb-2">1500+</div>
+            <p className="text-gray-600">Siswa Aktif</p>
+          </div>
+          <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
+            <p className="text-gray-600">Guru & Staff</p>
+          </div>
+          <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-4xl font-bold text-green-600 mb-2">50+</div>
+            <p className="text-gray-600">Prestasi</p>
+          </div>
+          <div className="text-center p-6 bg-green-50 rounded-lg">
+            <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
+            <p className="text-gray-600">Tingkat Keterserapan</p>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Keunggulan Kami
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex gap-4">
+              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Fasilitas Modern
+                </h3>
+                <p className="text-gray-600">
+                  Dilengkapi dengan laboratorium komputer, bengkel praktek, dan
+                  perpustakaan digital untuk mendukung pembelajaran optimal.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Award className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Program Unggulan
+                </h3>
+                <p className="text-gray-600">
+                  Menawarkan program kejuruan yang relevan dengan kebutuhan
+                  industri dan dilengkapi sertifikasi kompetensi.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Users className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Pengajar Profesional
+                </h3>
+                <p className="text-gray-600">
+                  Tim pengajar berpengalaman dan tersertifikasi yang terus
+                  mengembangkan kompetensi.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <Briefcase className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Kerjasama Industri
+                </h3>
+                <p className="text-gray-600">
+                  Menjalin kerjasama dengan berbagai perusahaan untuk program
+                  magang dan rekrutmen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Program Keahlian
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Teknik Komputer & Jaringan
+              </h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Administrasi Jaringan</li>
+                <li>• Keamanan Sistem</li>
+                <li>• Cloud Computing</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Multimedia
+              </h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Desain Grafis</li>
+                <li>• Animasi 3D</li>
+                <li>• Video Editing</li>
+              </ul>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Akuntansi
+              </h3>
+              <ul className="text-gray-600 space-y-2">
+                <li>• Akuntansi Digital</li>
+                <li>• Perpajakan</li>
+                <li>• Administrasi Keuangan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
