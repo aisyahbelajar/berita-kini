@@ -16,19 +16,21 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Sejarah SMK Nusantara
+              Sejarah SMP TPI Gedangan
             </h2>
             <p className="text-gray-600 mb-4">
-              Didirikan pada tahun 1985, SMK Nusantara telah berkembang menjadi
-              salah satu lembaga pendidikan kejuruan terkemuka di Indonesia.
-              Dengan komitmen untuk menghasilkan lulusan yang berkualitas dan
-              siap kerja, kami terus berinovasi dalam metode pembelajaran dan
+              Didirikan pada tahun 3 Januari 1972, SMP TPI Gedangan sejak awal
+              berkomitmen untuk menyediakan pendidikan yang mengintegrasikan
+              nilai-nilai keislaman dengan kurikulum pendidikan nasional. Dengan
+              komitmen untuk menghasilkan lulusan yang berkualitas dan siap
+              kerja, kami terus berinovasi dalam metode pembelajaran dan
               fasilitas pendidikan.
             </p>
             <p className="text-gray-600">
-              Selama lebih dari 35 tahun, kami telah menghasilkan ribuan alumni
-              yang kini berkarir sukses di berbagai sektor industri, baik di
-              dalam maupun luar negeri.
+              Dengan pengalaman lebih dari lima dekade, kami terus berupaya
+              meningkatkan kualitas pendidikan dan beradaptasi dengan
+              perkembangan zaman, sambil tetap mempertahankan nilai-nilai
+              keislaman sebagai landasan utama dalam mendidik generasi muda.
             </p>
           </div>
           <div>
@@ -42,20 +44,20 @@ export default function About() {
 
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           <div className="text-center p-6 bg-green-50 rounded-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">1500+</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">300+</div>
             <p className="text-gray-600">Siswa Aktif</p>
           </div>
           <div className="text-center p-6 bg-green-50 rounded-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">20+</div>
             <p className="text-gray-600">Guru & Staff</p>
           </div>
           <div className="text-center p-6 bg-green-50 rounded-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">50+</div>
-            <p className="text-gray-600">Prestasi</p>
+            <div className="text-4xl font-bold text-green-600 mb-2">B</div>
+            <p className="text-gray-600">Akreditasi</p>
           </div>
           <div className="text-center p-6 bg-green-50 rounded-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
-            <p className="text-gray-600">Tingkat Keterserapan</p>
+            <div className="text-4xl font-bold text-green-600 mb-2">6</div>
+            <p className="text-gray-600">Jumlah Kelas</p>
           </div>
         </div>
 

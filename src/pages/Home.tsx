@@ -49,41 +49,45 @@ export default function Home() {
             <div className="w-40 h-1 bg-green-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center bg-green-600 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-green-700 mb-2">
                 Akreditasi B
               </h3>
-              <p className="text-gray-200">
+              <p className="text-gray-500">
                 Terakreditasi B dengan fasilitas modern
               </p>
             </div>
-            <div className="text-center bg-green-600 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Prestasi</h3>
-              <p className="text-gray-200">
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Prestasi
+              </h3>
+              <p className="text-gray-500">
                 Berbagai prestasi tingkat nasional
               </p>
             </div>
-            <div className="text-center bg-green-600 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">
+              <h3 className="text-xl font-bold text-green-700 mb-2">
                 Guru Profesional
               </h3>
-              <p className="text-gray-200">Tim pengajar berpengalaman</p>
+              <p className="text-gray-500">Tim pengajar berpengalaman</p>
             </div>
-            <div className="text-center bg-green-600 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Kurikulum</h3>
-              <p className="text-gray-200">Kurikulum terintegrasi industri</p>
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Kurikulum
+              </h3>
+              <p className="text-gray-500">Kurikulum terintegrasi industri</p>
             </div>
           </div>
         </div>
@@ -133,22 +137,22 @@ export default function Home() {
             <div className="w-20 h-1 bg-green-600 mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="text-center justify-center al bg-green-600 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
+            <div className="text-center justify-center al bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <h3 className="text-2xl font-bold text-green-700 mb-4 text-center">
                 Visi
               </h3>
-              <p className="text-gray-200">
+              <p className="text-gray-600 flex items-center">
                 Menciptakan generasi Islami yang cerdas, berakhlak mulia, dan
                 berprestasi di bidang akademik maupun non-akademik, serta mampu
                 menjadi teladan dalam kehidupan bermasyarakat berdasarkan
                 nilai-nilai keislaman.
               </p>
             </div>
-            <div className="bg-green-600 p-8 rounded-lg shadow-lg  transform transition-transform duration-300 hover:scale-105">
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
+            <div className="bg-green-50 p-8 rounded-lg shadow-lg  transform transition-transform duration-300 hover:scale-105">
+              <h3 className="text-2xl font-bold text-green-700 mb-4 text-center">
                 Misi
               </h3>
-              <ul className="text-gray-200 space-y-2">
+              <ul className="text-gray-600 space-y-2">
                 <li>
                   1. Menanamkan nilai-nilai keislaman dalam setiap aspek
                   pembelajaran dan kegiatan sekolah.

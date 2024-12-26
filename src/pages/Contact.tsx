@@ -23,14 +23,14 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-green-600 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-900">Telepon</h3>
-                  <p className="text-gray-600">(021) 555-0123</p>
+                  <p className="text-gray-600">(031) 99602183</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-green-600 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">info@smknusantara.sch.id</p>
+                  <p className="text-gray-600">smptpigedangan@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -38,7 +38,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-gray-900">Alamat</h3>
                   <p className="text-gray-600">
-                    Jl. Pendidikan No. 123, Jakarta
+                    Jln. R Kanjeng Jimat, Kecamatan Gedangan, Kabupaten
+                    Sidoarjo, Jawa Timur.
                   </p>
                 </div>
               </div>
