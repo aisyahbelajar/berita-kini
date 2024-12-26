@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className="relative bg-[url('https://cdn.discordapp.com/attachments/1304080685845450784/1321775627854151752/IMG-20241226-WA0014.jpg?ex=676e76fb&is=676d257b&hm=6efa4af94752533488b2e967e25d1ee5eebb36128080f6a64228d5c99f757a3e&')] bg-cover bg-center h-screen w-full">
+      <div className="relative bg-[url('https://cdn.discordapp.com/attachments/1304080685845450784/1321847515326447766/IMG-20241226-WA0016.jpg?ex=676eb9ee&is=676d686e&hm=a974d319bde23106faccfa12cbdf3b6410548d55f11b6f53a58cca9371e157aa&')] bg-cover bg-center h-screen w-full">
         <div className="absolute inset-0 bg-green-900 opacity-70"></div>
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="text-white">

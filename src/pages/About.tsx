@@ -35,7 +35,7 @@ export default function About() {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              src="https://cdn.discordapp.com/attachments/1304080685845450784/1321847515326447766/IMG-20241226-WA0016.jpg?ex=676eb9ee&is=676d686e&hm=a974d319bde23106faccfa12cbdf3b6410548d55f11b6f53a58cca9371e157aa&"
               alt="Sekolah"
               className="rounded-lg shadow-lg"
             />
