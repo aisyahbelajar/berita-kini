@@ -48,7 +48,7 @@ export default function About() {
             <p className="text-gray-600">Siswa Aktif</p>
           </div>
           <div className="text-center p-6 bg-green-50 rounded-lg">
-            <div className="text-4xl font-bold text-green-600 mb-2">20+</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">10+</div>
             <p className="text-gray-600">Guru & Staff</p>
           </div>
           <div className="text-center p-6 bg-green-50 rounded-lg">

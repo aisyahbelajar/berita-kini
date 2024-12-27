@@ -9,20 +9,20 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative bg-[url('https://cdn.discordapp.com/attachments/1304080685845450784/1321847515326447766/IMG-20241226-WA0016.jpg?ex=676eb9ee&is=676d686e&hm=a974d319bde23106faccfa12cbdf3b6410548d55f11b6f53a58cca9371e157aa&')] bg-cover bg-center h-screen w-full">
         <div className="absolute inset-0 bg-green-900 opacity-70"></div>
-        <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
-          <div className="text-white">
-            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-7xl uppercase">
-              <span className="text-green-see">SMP {""}</span>
+        <div className="relative max-w-screen-xl mx-auto px-4 h-full flex flex-col justify-center">
+          <div className="">
+            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl uppercase">
+              <span className="text-green-500">SMP {""}</span>
               <span className="text-white">
                 TAMAN <br />
                 PENDIDIKAN ISLAM
               </span>
-              <span className="text-green-see">
+              <span className="text-green-500">
                 <br />
                 GEDANGAN
               </span>
             </h1>
-            <p className="text-xl mb-8">
+            <p className="text-xl mb-8 text-gray-200 pt-4">
               Membentuk Generasi Unggul, Berkarakter, dan Siap Bersaing
             </p>
             <Link
@@ -34,9 +34,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* Mengapa Memilih Kami */}
       <div className="py-16 ">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-screen-xl mx-auto px-4">
           <div className="text-center mb-12">
             <h1 className="font-bold text-slate-800 text-4xl capitalize mb-6">
               Kenapa Harus{" "}
@@ -119,15 +120,21 @@ export default function Home() {
                 berkualitas.
               </p>
               <div className="space-y-2 text-gray-600">
-                <p>• S3 Manajemen Pendidikan - Universitas Indonesia</p>
-                <p>• Best Principal Award 2023</p>
-                <p>• Penasehat Asosiasi Kepala Sekolah Indonesia</p>
+                <p>
+                  • Magister Teknologi Pendidikan - Universitas PGRI Adi Buana
+                  Surabaya
+                </p>
+                <p>
+                  • Profesi Pendidikan Profesi Guru - Universitas Negeri
+                  Yogyakarta
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Visi Misi Section */}
       <div className="py-16 ">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -171,7 +178,53 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Visi Misi Section */}
+      {/* Tenaga Kependidikan Section */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Tenaga Kependidikan
+            </h2>
+            <div className="w-20 h-1 mb-10 bg-green-600 mx-auto"></div>
+
+            <div className="flex flex-wrap  gap-8 items-center justify-center">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Anisatul Umaroh</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Choirul Waro</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Dianita Rahma Laili</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Hainijah</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Hendra Kusuma Djafar</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Miftakul Jannah</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Muhammad Fahrurrozi</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Nindia Annisa Rahayu Mochtar</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+                <h1 className="font-medium">Ririn Dwi Arika</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
+                <h1 className="font-medium">Syafiuddin</h1>
+              </div>
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
+                <h1 className="font-medium">Windi Indra Sukmana</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Berita Terbaru */}
       <div className="py-16">
