@@ -163,7 +163,7 @@ export default function Home() {
               <img
                 src="https://cdn.discordapp.com/attachments/1304080685845450784/1322593679998980106/Poster_1_2.png?ex=677170d9&is=67701f59&hm=16d733bbae29584f2b430564f31aeb648e09f27f7036b5b4bccbb6da12435727&"
                 alt=""
-                className="w-[50%] rounded-lg mx-auto"
+                className="lg:w-[50%] md:w-[70%] rounded-lg mx-auto sm:w-full"
               />
             </div>
           </div>
