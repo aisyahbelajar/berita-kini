@@ -154,6 +154,22 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Info PPDB</h2>
+            <div className="w-20 h-1 bg-green-600 mx-auto flex justify-center"></div>
+            <div className="pt-6 items-center justify-center flex">
+              <img
+                src="https://cdn.discordapp.com/attachments/1304080685845450784/1322593679998980106/Poster_1_2.png?ex=677170d9&is=67701f59&hm=16d733bbae29584f2b430564f31aeb648e09f27f7036b5b4bccbb6da12435727&"
+                alt=""
+                className="w-[50%] rounded-lg mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Tenaga Kependidikan Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4">

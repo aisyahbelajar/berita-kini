@@ -38,10 +38,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center">
+      <div className="relative h-full flex items-center justify-end">
         <div className="container mx-auto px-4">
           <div className="absolute inset-0 bg-green-900 opacity-10"></div>
-          <div className="max-w-4xl mx-auto text-center transform hover:scale-105 transition-transform duration-500">
+          <div className="max-w-4xl mx-auto text-start transform hover:scale-105 transition-transform duration-500">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-down">
               <span className="text-green-500"> {""}</span>
               <span className="text-white"> Yuk Daftar di PPDB</span>
