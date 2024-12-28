@@ -2,38 +2,14 @@ import React from "react";
 import { GraduationCap, Award, Users, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { newsData } from "../data/news";
+import HeroSection from "../components/HeroSection";
+import "../styles/animations.css";
 
 export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
-      <div className="relative bg-[url('https://cdn.discordapp.com/attachments/1304080685845450784/1321847515326447766/IMG-20241226-WA0016.jpg?ex=676eb9ee&is=676d686e&hm=a974d319bde23106faccfa12cbdf3b6410548d55f11b6f53a58cca9371e157aa&')] bg-cover bg-center h-screen w-full">
-        <div className="absolute inset-0 bg-green-900 opacity-70"></div>
-        <div className="relative max-w-screen-xl mx-auto px-4 h-full flex flex-col justify-center">
-          <div className="">
-            <h1 className="font-extrabold text-4xl md:text-5xl lg:text-6xl uppercase">
-              <span className="text-green-500">SMP {""}</span>
-              <span className="text-white">
-                TAMAN <br />
-                PENDIDIKAN ISLAM
-              </span>
-              <span className="text-green-500">
-                <br />
-                GEDANGAN
-              </span>
-            </h1>
-            <p className="text-xl mb-8 text-gray-200 pt-4">
-              Membentuk Generasi Unggul, Berkarakter, dan Siap Bersaing
-            </p>
-            <Link
-              to="/contact"
-              className="bg-white text-green-800 px-6 py-3 rounded-lg font-semibold hover:bg-green-100 transition"
-            >
-              Daftar Sekarang
-            </Link>
-          </div>
-        </div>
-      </div>
+      <HeroSection />
 
       {/* Mengapa Memilih Kami */}
       <div className="py-16 ">
@@ -100,7 +76,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="items-center justify-center flex">
               <img
-                src="https://cdn.discordapp.com/attachments/1304080685845450784/1321805507350237265/removal.ai_0b92d2dd-19d4-43a6-b185-e8be0f6d017e-image-1.png?ex=676e92ce&is=676d414e&hm=eae412544e9eede71ec88b0e5c22ce3eaaf445ea3742e18a05ffc76a65207b60&"
+                src="https://i.imgur.com/Y1xC20y.png"
                 alt="Kepala Sekolah"
                 className="group relative bg-gradient-to-br from-green-800 via-green-500 to-green-200 rounded-lg text-white transform-gpu transition-transform duration-500 cursor-pointer hover:scale-105 hover:rotate-x-10 hover:rotate-y-10 hover:shadow-lg"
               />
