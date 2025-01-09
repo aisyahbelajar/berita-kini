@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (e) => {
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="fixed w-full z-50 bg-gradient-to-r from-green-600 to-green-800 text-white rounded-b-[20px] shadow-lg">
@@ -58,29 +72,33 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden" ref={menuRef}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               to="/"
               className="block hover:bg-green-700 px-3 py-2 rounded-md"
+              onClick={() => setIsOpen(false)} // Menutup setelah klik link
             >
               Beranda
             </Link>
             <Link
               to="/about"
               className="block hover:bg-green-700 px-3 py-2 rounded-md"
+              onClick={() => setIsOpen(false)} // Menutup setelah klik link
             >
               Tentang Kami
             </Link>
             <Link
               to="/news"
               className="block hover:bg-green-700 px-3 py-2 rounded-md"
+              onClick={() => setIsOpen(false)} // Menutup setelah klik link
             >
               Berita
             </Link>
             <Link
               to="/contact"
               className="block hover:bg-green-700 px-3 py-2 rounded-md"
+              onClick={() => setIsOpen(false)} // Menutup setelah klik link
             >
               Kontak
             </Link>

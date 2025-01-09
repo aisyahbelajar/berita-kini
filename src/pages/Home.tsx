@@ -183,7 +183,7 @@ export default function Home() {
             </h1>
             <div className="w-40 h-1 bg-green-600 mx-auto"></div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols- gap-8">
             <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
               <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-8 h-8 text-green-600" />
