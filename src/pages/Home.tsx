@@ -74,11 +74,11 @@ export default function Home() {
       <div className="py-16 ">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="items-center justify-center flex">
+            <div className="items-center justify-center flex animate-float ">
               <img
                 src="https://i.imgur.com/Y1xC20y.png"
                 alt="Kepala Sekolah"
-                className="group relative bg-gradient-to-br from-green-800 via-green-500 to-green-200 rounded-lg text-white transform-gpu transition-transform duration-500 cursor-pointer hover:scale-105 hover:rotate-x-10 hover:rotate-y-10 hover:shadow-lg"
+                className="group relative bg-gradient-to-br -rotate-45 from-green-800 via-green-500 to-green-200 rounded-lg text-white transform-gpu transition-transform duration-500 cursor-pointer hover:scale-105 hover:rotate-x-10 hover:rotate-y-10 hover:shadow-lg"
               />
             </div>
             <div>
@@ -154,6 +154,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Info PPDB */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -161,10 +162,65 @@ export default function Home() {
             <div className="w-20 h-1 bg-green-600 mx-auto flex justify-center"></div>
             <div className="pt-6 items-center justify-center flex">
               <img
-                src="https://cdn.discordapp.com/attachments/1304080685845450784/1322593679998980106/Poster_1_2.png?ex=677170d9&is=67701f59&hm=16d733bbae29584f2b430564f31aeb648e09f27f7036b5b4bccbb6da12435727&"
+                src="https://tools.corenexis.com/image/cnxm/Q25/01/39357bb1d7.webp"
                 alt=""
                 className="lg:w-[50%] md:w-[70%] rounded-lg mx-auto sm:w-full"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pembiasaan */}
+      <div className="py-16 ">
+        <div className="max-w-screen-xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="font-bold text-slate-800 text-4xl capitalize mb-6">
+              Pembiasaan <br />
+              <span className="text-green-see">
+                SMP Taman Pendidikan Islam Gedangan
+              </span>
+            </h1>
+            <div className="w-40 h-1 bg-green-600 mx-auto"></div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Sholat Dhuha dan Sholat Dhuhur Berjamaah
+              </h3>
+            </div>
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Kajian Fiqih & Akhlaq
+              </h3>
+            </div>
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-green-700 mb-2">Sinarta</h3>
+            </div>
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Green & Clean
+              </h3>
+            </div>
+            <div className="text-center bg-green-50 rounded-lg p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-200 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-green-700 mb-2">
+                Muroja'ah
+              </h3>
             </div>
           </div>
         </div>
@@ -179,38 +235,38 @@ export default function Home() {
             </h2>
             <div className="w-20 h-1 mb-10 bg-green-600 mx-auto"></div>
 
-            <div className="flex flex-wrap  gap-8 items-center justify-center">
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+            <div className="flex flex-wrap gap-8 items-center justify-center">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Anisatul Umaroh</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Choirul Waro</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Dianita Rahma Laili</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Hainijah</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Hendra Kusuma Djafar</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Miftakul Jannah</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Muhammad Fahrurrozi</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Nindia Annisa Rahayu Mochtar</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink">
                 <h1 className="font-medium">Ririn Dwi Arika</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
                 <h1 className="font-medium">Syafiuddin</h1>
               </div>
-              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-96 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
+              <div className="bg-green-50 p-8 rounded-lg shadow-lg transform transition-transform duration w-72 flex-grow flex-shrink md:flex-grow-0 md:flex-shrink-0">
                 <h1 className="font-medium">Windi Indra Sukmana</h1>
               </div>
             </div>

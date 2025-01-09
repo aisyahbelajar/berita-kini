@@ -13,68 +13,57 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBg((prev) => (prev + 1) % backgrounds.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Background Images */}
-      {backgrounds.map((bg, index) => (
-        <div
-          key={bg}
-          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-            currentBg === index ? "opacity-100" : "opacity-0"
-          }`}
-          style={{
-            backgroundImage: `url(${bg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
-      ))}
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* Content */}
-      <div className="relative h-full flex items-center justify-end">
-        <div className="container mx-auto px-4">
-          <div className="absolute inset-0 bg-green-900 opacity-10"></div>
-          <div className="max-w-4xl mx-auto text-start transform hover:scale-105 transition-transform duration-500">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-down">
-              <span className="text-green-500"> {""}</span>
-              <span className="text-white"> Yuk Daftar di PPDB</span>
-              <span className="text-green-500">
-                <br />
-                SMP TPI Gedangan
-              </span>
+    <section
+      id="home"
+      className="min-h-screen flex items-center pt-16 bg-gradient-to-r from-green-50 via-green-200 to-green-300 relative overflow-hidden"
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          {/* Left Section */}
+          <div className="md:w-1/2 space-y-6">
+            <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-[#1d8314] via-[#1d8314] to-[#1b7a20] text-transparent bg-clip-text">
+              SMP TPI Gedangan
             </h1>
-            <p className="text-xl md:text-2xl text-white mb-8 animate-fade-in-up">
+            <p className="text-xl text-green-700 max-w-lg">
               Membentuk Generasi Unggul, Berkarakter, dan Siap Bersaing
             </p>
-            <div className="space-x-4">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300 animate-bounce">
-                Daftar Sekarang !
-              </button>
+
+            <div className="flex justify-start space-x-6 mt-6">
+              <div className="animate-bounce flex gap-4">
+                <a
+                  href="https://wa.me/6285755325592"
+                  className="bg-[#1d8314] text-white py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                >
+                  Daftar Sekarang
+                </a>
+                <a
+                  href="https://drive.google.com/file/d/1W4vQLb1Ta2dC305LSnS5ULU4TN64Xzse/view"
+                  className="bg-[#ffffff] text-[#1d8314] py-3 px-6 rounded-full border-2 border-[#1d8314] shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                >
+                  Download Brosur
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section - Image */}
+          <div className="md:w-1/2 mt-12 md:mt-0">
+            <div className="animate-float">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1b7a20] via-[#1d8314] to-transparent opacity-50 rounded-lg -rotate-45"></div>
+              <img
+                src={backgrounds[currentBg]}
+                alt="SMP TPI Gedangan"
+                className="rounded-lg shadow-2xl transform transition-all duration-1000 ease-in-out hover:-rotate-[400deg] -rotate-[40deg]"
+              />
             </div>
           </div>
         </div>
-
-        {/* 3D Decorative Elements */}
-        <div className="absolute left-10 top-20 w-20 h-20 bg-blue-500/30 rounded-lg animate-float transform rotate-45 backdrop-blur-sm" />
-        <div className="absolute right-10 bottom-1/4 w-16 h-16 bg-purple-500/30 rounded-lg animate-float-delayed transform -rotate-12 backdrop-blur-sm" />
-        <div className="absolute left-1/4 bottom-20 w-24 h-24 bg-green-500/30 rounded-full animate-float-slow backdrop-blur-sm" />
       </div>
-
-      {/* Background Dots Pattern */}
-      <div
-        className="absolute inset-0 bg-repeat opacity-10"
-        style={{
-          backgroundImage: `radial-gradient(circle, white 1px, transparent 1px)`,
-          backgroundSize: "30px 30px",
-        }}
-      />
-    </div>
+    </section>
   );
 }

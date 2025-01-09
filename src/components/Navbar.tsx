@@ -6,12 +6,22 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="fixed w-full z-50 bg-gradient-to-r from-green-600 to-green-800 text-white">
+    <nav className="fixed w-full z-50 bg-gradient-to-r from-green-600 to-green-800 text-white rounded-b-[20px] shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="font-bold text-xl">
-            SMP TPI Gedangan
-          </Link>
+          <div className="flex items-center space-x-4">
+            <img
+              src="https://tools.corenexis.com/image/cnxm/Q25/01/707198f98f.webp"
+              alt="logo"
+              className="h-12 w-12 object-contain rounded-full shadow-lg"
+            />
+            <Link
+              to="/"
+              className="font-extrabold text-2xl text-white hover:text-green-200 transition-colors duration-300"
+            >
+              SMP TPI Gedangan
+            </Link>
+          </div>
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
