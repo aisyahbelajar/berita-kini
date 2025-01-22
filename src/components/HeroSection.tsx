@@ -84,8 +84,8 @@ export default function HeroSection() {
             <div className="md:w-1/2 mt-12 md:mt-0">
               <div className="animate-float">
                 <img
-                  src="public/assets/heroImage.png"
-                  alt="SMP TPI Gedangan"
+                  src="https://i.imgur.com/wStNN5G.png"
+                  alt="Berita Kini"
                   className="rounded-lg shadow-2xl rotate-315"
                 />
               </div>
