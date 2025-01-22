@@ -19,44 +19,74 @@ export default function HeroSection() {
 
   return (
     <div>
-      <section className="min-h-screen flex items-center pt-16 bg-gradient-to-r from-green-50 via-green-200 to-green-300">
+      <section className="min-h-screen flex items-center pt-16 ">
         <div className="max-w-screen-xl mx-auto container md:p-12 p-5">
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Left Section */}
-            <div className="md:w-1/2 space-y-6">
-              <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-[#1d8314] via-[#1d8314] to-[#1b7a20] text-transparent bg-clip-text">
-                SMP TPI Gedangan
+            <div className="md:w-2/5 space-y-4">
+              <p className="text-secondary-text">Headline</p>
+              <h1 className="font-bold text-4xl bg-clip-text">
+                Respons PSSI Soal Opsi Pindah dari GBK jika Lolos Babak 3
+                Kualifikasi
               </h1>
-              <p className="text-xl text-green-700 max-w-lg">
-                Membentuk Generasi Unggul, Berkarakter, dan Siap Bersaing
+              <p className="text-base text-[#4F4F4F] max-w-lg">
+                Ketua Badan Tim Nasional (BTN) PSSI Sumardji merespons peluang
+                Timnas Indonesia pindah dari Stadion Utama Gelora Bung Karno
+                (GBK) apabila lolos ke putaran ketiga Kualifikasi Piala Dunia
+                2026.
               </p>
-
-              <div className="flex justify-start space-x-6 mt-6">
-                <div className="animate-bounce flex gap-4">
-                  <a
-                    href="https://wa.me/6285755325592"
-                    className="bg-[#1d8314] text-white py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
-                  >
-                    Daftar Sekarang
-                  </a>
-                  <a
-                    href="https://drive.google.com/file/d/1W4vQLb1Ta2dC305LSnS5ULU4TN64Xzse/view"
-                    className="bg-[#ffffff] text-[#1d8314] py-3 px-6 rounded-full border-2 border-[#1d8314] shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
-                  >
-                    Download Brosur
-                  </a>
-                </div>
+              <div className="flex align-baseline content-center gap-2">
+                <svg
+                  width="14"
+                  height="15"
+                  viewBox="0 0 14 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_5001_28878)">
+                    <path
+                      d="M9.625 6.04248C9.625 5.92645 9.67109 5.81517 9.75314 5.73312C9.83519 5.65107 9.94647 5.60498 10.0625 5.60498H10.9375C11.0535 5.60498 11.1648 5.65107 11.2469 5.73312C11.3289 5.81517 11.375 5.92645 11.375 6.04248V6.91748C11.375 7.03351 11.3289 7.14479 11.2469 7.22684C11.1648 7.30889 11.0535 7.35498 10.9375 7.35498H10.0625C9.94647 7.35498 9.83519 7.30889 9.75314 7.22684C9.67109 7.14479 9.625 7.03351 9.625 6.91748V6.04248Z"
+                      fill="#828282"
+                    />
+                    <path
+                      d="M3.0625 0.35498C3.17853 0.35498 3.28981 0.401074 3.37186 0.483121C3.45391 0.565168 3.5 0.676448 3.5 0.79248V1.22998H10.5V0.79248C10.5 0.676448 10.5461 0.565168 10.6281 0.483121C10.7102 0.401074 10.8215 0.35498 10.9375 0.35498C11.0535 0.35498 11.1648 0.401074 11.2469 0.483121C11.3289 0.565168 11.375 0.676448 11.375 0.79248V1.22998H12.25C12.7141 1.22998 13.1592 1.41435 13.4874 1.74254C13.8156 2.07073 14 2.51585 14 2.97998V12.605C14 13.0691 13.8156 13.5142 13.4874 13.8424C13.1592 14.1706 12.7141 14.355 12.25 14.355H1.75C1.28587 14.355 0.840752 14.1706 0.512563 13.8424C0.184374 13.5142 0 13.0691 0 12.605V2.97998C0 2.51585 0.184374 2.07073 0.512563 1.74254C0.840752 1.41435 1.28587 1.22998 1.75 1.22998H2.625V0.79248C2.625 0.676448 2.67109 0.565168 2.75314 0.483121C2.83519 0.401074 2.94647 0.35498 3.0625 0.35498ZM0.875 3.85498V12.605C0.875 12.837 0.967187 13.0596 1.13128 13.2237C1.29538 13.3878 1.51794 13.48 1.75 13.48H12.25C12.4821 13.48 12.7046 13.3878 12.8687 13.2237C13.0328 13.0596 13.125 12.837 13.125 12.605V3.85498H0.875Z"
+                      fill="#828282"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5001_28878">
+                      <rect width="14" height="14" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p>22 Januari 2024</p>
               </div>
+              <a className="flex gap-2 align-baseline">
+                <p>Baca Selengkapnya</p>
+                <svg
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.0001 2.85498C14.0001 2.72237 13.9475 2.5952 13.8537 2.50143C13.7599 2.40766 13.6328 2.35498 13.5001 2.35498H7.50014C7.36753 2.35498 7.24036 2.40766 7.14659 2.50143C7.05282 2.5952 7.00014 2.72237 7.00014 2.85498C7.00014 2.98759 7.05282 3.11477 7.14659 3.20853C7.24036 3.3023 7.36753 3.35498 7.50014 3.35498H12.2931L2.14614 13.501C2.09966 13.5475 2.06278 13.6027 2.03762 13.6634C2.01246 13.7241 1.99951 13.7892 1.99951 13.855C1.99951 13.9207 2.01246 13.9858 2.03762 14.0466C2.06278 14.1073 2.09966 14.1625 2.14614 14.209C2.19263 14.2555 2.24782 14.2923 2.30856 14.3175C2.3693 14.3427 2.4344 14.3556 2.50014 14.3556C2.56589 14.3556 2.63099 14.3427 2.69173 14.3175C2.75247 14.2923 2.80766 14.2555 2.85414 14.209L13.0001 4.06198V8.85498C13.0001 8.98759 13.0528 9.11477 13.1466 9.20853C13.2404 9.3023 13.3675 9.35498 13.5001 9.35498C13.6328 9.35498 13.7599 9.3023 13.8537 9.20853C13.9475 9.11477 14.0001 8.98759 14.0001 8.85498V2.85498Z"
+                    fill="#0090FF"
+                  />
+                </svg>
+              </a>
             </div>
 
             {/* Right Section - Image */}
             <div className="md:w-1/2 mt-12 md:mt-0">
               <div className="animate-float">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1b7a20] via-[#1d8314] to-transparent opacity-50 rounded-lg -rotate-45"></div>
                 <img
-                  src={backgrounds[currentBg]}
+                  src="public/assets/heroImage.png"
                   alt="SMP TPI Gedangan"
-                  className="rounded-lg shadow-2xl transform transition-all duration-1000 ease-in-out hover:-rotate-[400deg] -rotate-[48deg]"
+                  className="rounded-lg shadow-2xl rotate-315"
                 />
               </div>
             </div>

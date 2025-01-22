@@ -5,4 +5,5 @@ export interface News {
   image: string;
   summary: string;
   content: string;
+  tag: string;
 }

@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
 
   const handleClickOutside = (e) => {
@@ -12,53 +13,126 @@ export default function Navbar() {
     }
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <nav className="fixed w-full z-50 bg-gradient-to-r from-green-600 to-green-800 text-white rounded-b-[20px] shadow-lg">
+    <nav
+      className={`fixed w-full z-50 rounded-b-[20px] shadow-lg transition-colors duration-300 ${
+        scrolled ? "bg-[#0090FF] text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
-            <img
-              src="https://tools.corenexis.com/image/cnxm/Q25/01/707198f98f.webp"
-              alt="logo"
-              className="h-12 w-12 object-contain rounded-full shadow-lg"
-            />
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_5001_28660"
+                className="mask-type:luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="44"
+                height="44"
+              >
+                <path d="M43.3352 0H0V44H43.3352V0Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_5001_28660)">
+                <path
+                  d="M23.8789 7.53563L25.5504 5.86418C28.8327 2.58188 34.1763 2.50064 37.4775 5.76403C38.7284 7.00333 39.5597 8.60334 39.8546 10.3393C40.1494 12.0753 39.893 13.86 39.1215 15.4428C38.7514 16.1989 38.6267 17.0517 38.7647 17.8821C38.9029 18.7125 39.2968 19.479 39.8917 20.0746C40.9857 18.9782 41.8527 17.6769 42.4435 16.2453C43.0343 14.8136 43.3374 13.2795 43.3352 11.7307C43.3329 10.182 43.0257 8.64878 42.4308 7.21879C41.8359 5.78878 40.9651 4.49001 39.8681 3.39665C35.252 -1.19344 27.7592 -1.1021 23.1559 3.50089L7.22418 19.4322L5.91444 18.1225C2.57648 14.7845 2.5552 9.3283 5.95205 6.04966C7.20941 4.83979 8.81132 4.05 10.5367 3.7893C12.262 3.5286 14.0257 3.80984 15.5844 4.5942C16.2959 4.95878 17.1043 5.08919 17.8943 4.96684C18.6843 4.84448 19.4154 4.47561 19.9833 3.9129L20.0239 3.87249C20.0365 3.85994 20.0465 3.845 20.0534 3.82854C20.0602 3.8121 20.0638 3.79445 20.0638 3.77664C20.0638 3.75882 20.0602 3.74118 20.0534 3.72473C20.0465 3.70829 20.0365 3.69335 20.0239 3.68078C17.8311 1.54308 14.8927 0.342344 11.8303 0.332636C8.76795 0.32293 5.82192 1.50502 3.61563 3.62877C-1.13695 8.21672 -1.11997 15.846 3.55115 20.5172L19.4782 36.4442L17.7863 38.1361C14.504 41.4184 9.1602 41.4996 5.85921 38.2362C4.60834 36.997 3.77708 35.3969 3.48219 33.661C3.18731 31.925 3.44359 30.1403 4.21505 28.5574C4.58517 27.8013 4.70991 26.9485 4.57186 26.1183C4.4338 25.2878 4.03982 24.5212 3.44498 23.9256C2.35109 25.0222 1.48396 26.3233 0.893109 27.7549C0.30226 29.1867 -0.000718777 30.7206 0.00147669 32.2696C0.00367217 33.8183 0.310998 35.3515 0.905906 36.7814C1.50081 38.2115 2.37164 39.5103 3.46862 40.6036C8.08451 45.1939 15.5776 45.1028 20.1808 40.4996L36.1332 24.547L37.4479 25.8616C40.7302 29.1439 40.8114 34.4875 37.548 37.7885C36.3088 39.0396 34.7087 39.8707 32.9727 40.1658C31.2368 40.4607 29.4521 40.2043 27.8692 39.4327C27.1129 39.0624 26.2596 38.9375 25.429 39.0759C24.5983 39.2141 23.8315 39.6085 23.2359 40.2038C24.3324 41.2978 25.6336 42.165 27.0652 42.7558C28.497 43.3467 30.0309 43.6497 31.5798 43.6475C33.1286 43.6452 34.6618 43.3378 36.0917 42.7429C37.5218 42.148 38.8206 41.2772 39.9139 40.1802C44.5042 35.5643 44.4129 28.0713 39.8099 23.4683L23.8789 7.53563ZM21.8565 34.0648L9.60316 21.8114L21.4998 9.91504L33.7531 22.1684L21.8565 34.0648Z"
+                  fill={`${scrolled ? "#ffffff" : "#0090FF"}`}
+                />
+              </g>
+            </svg>
+
             <Link
               to="/"
-              className="font-extrabold text-2xl text-white hover:text-green-200 transition-colors duration-300"
+              className={`font-semibold text-2xl transition-colors duration-300 ${
+                scrolled ? "text-white" : "text-[#111B26]"
+              }`}
             >
-              SMP TPI Gedangan
+              Berita Kini
             </Link>
           </div>
 
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link to="/" className="hover:bg-green-700 px-3 py-2 rounded-md">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <Link
+                to="/"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
+              >
                 Beranda
               </Link>
               <Link
                 to="/about"
-                className="hover:bg-green-700 px-3 py-2 rounded-md"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
               >
-                Tentang Kami
+                Terbaru
               </Link>
               <Link
                 to="/news"
-                className="hover:bg-green-700 px-3 py-2 rounded-md"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
               >
-                Berita
+                Hiburan
               </Link>
               <Link
                 to="/contact"
-                className="hover:bg-green-700 px-3 py-2 rounded-md"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
               >
-                Kontak
+                Gaya Hidup
+              </Link>
+              <Link
+                to="/contact"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
+              >
+                Olahraga
+              </Link>
+              <Link
+                to="/contact"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
+              >
+                Nasional
+              </Link>
+              <Link
+                to="/contact"
+                className={`text-base transition-colors duration-300 ${
+                  scrolled ? "text-white" : "text-[#828282]"
+                }`}
+              >
+                Internasional
               </Link>
             </div>
           </div>
@@ -73,34 +147,24 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden" ref={menuRef}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="space-y-1">
             <Link
               to="/"
-              className="block hover:bg-green-700 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)} // Menutup setelah klik link
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
             >
               Beranda
             </Link>
             <Link
               to="/about"
-              className="block hover:bg-green-700 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)} // Menutup setelah klik link
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
             >
-              Tentang Kami
-            </Link>
-            <Link
-              to="/news"
-              className="block hover:bg-green-700 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)} // Menutup setelah klik link
-            >
-              Berita
-            </Link>
-            <Link
-              to="/contact"
-              className="block hover:bg-green-700 px-3 py-2 rounded-md"
-              onClick={() => setIsOpen(false)} // Menutup setelah klik link
-            >
-              Kontak
+              Terbaru
             </Link>
           </div>
         </div>

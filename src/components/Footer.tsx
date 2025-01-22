@@ -1,47 +1,215 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-green-800 to-green-900 text-white">
+    <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">SMP TPI Gedangan</h3>
-            <p className="text-green-100">
-              Mendidik generasi masa depan dengan nilai-nilai luhur dan
-              kompetensi global.
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          <div className="space-y-6 col-span-2">
+            <div className="flex items-center gap-4 mb-2">
+              <svg
+                width="44"
+                height="44"
+                viewBox="0 0 44 44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <mask
+                  id="mask0_5001_28660"
+                  className="mask-type:luminance"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="44"
+                  height="44"
+                >
+                  <path d="M43.3352 0H0V44H43.3352V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_5001_28660)">
+                  <path
+                    d="M23.8789 7.53563L25.5504 5.86418C28.8327 2.58188 34.1763 2.50064 37.4775 5.76403C38.7284 7.00333 39.5597 8.60334 39.8546 10.3393C40.1494 12.0753 39.893 13.86 39.1215 15.4428C38.7514 16.1989 38.6267 17.0517 38.7647 17.8821C38.9029 18.7125 39.2968 19.479 39.8917 20.0746C40.9857 18.9782 41.8527 17.6769 42.4435 16.2453C43.0343 14.8136 43.3374 13.2795 43.3352 11.7307C43.3329 10.182 43.0257 8.64878 42.4308 7.21879C41.8359 5.78878 40.9651 4.49001 39.8681 3.39665C35.252 -1.19344 27.7592 -1.1021 23.1559 3.50089L7.22418 19.4322L5.91444 18.1225C2.57648 14.7845 2.5552 9.3283 5.95205 6.04966C7.20941 4.83979 8.81132 4.05 10.5367 3.7893C12.262 3.5286 14.0257 3.80984 15.5844 4.5942C16.2959 4.95878 17.1043 5.08919 17.8943 4.96684C18.6843 4.84448 19.4154 4.47561 19.9833 3.9129L20.0239 3.87249C20.0365 3.85994 20.0465 3.845 20.0534 3.82854C20.0602 3.8121 20.0638 3.79445 20.0638 3.77664C20.0638 3.75882 20.0602 3.74118 20.0534 3.72473C20.0465 3.70829 20.0365 3.69335 20.0239 3.68078C17.8311 1.54308 14.8927 0.342344 11.8303 0.332636C8.76795 0.32293 5.82192 1.50502 3.61563 3.62877C-1.13695 8.21672 -1.11997 15.846 3.55115 20.5172L19.4782 36.4442L17.7863 38.1361C14.504 41.4184 9.1602 41.4996 5.85921 38.2362C4.60834 36.997 3.77708 35.3969 3.48219 33.661C3.18731 31.925 3.44359 30.1403 4.21505 28.5574C4.58517 27.8013 4.70991 26.9485 4.57186 26.1183C4.4338 25.2878 4.03982 24.5212 3.44498 23.9256C2.35109 25.0222 1.48396 26.3233 0.893109 27.7549C0.30226 29.1867 -0.000718777 30.7206 0.00147669 32.2696C0.00367217 33.8183 0.310998 35.3515 0.905906 36.7814C1.50081 38.2115 2.37164 39.5103 3.46862 40.6036C8.08451 45.1939 15.5776 45.1028 20.1808 40.4996L36.1332 24.547L37.4479 25.8616C40.7302 29.1439 40.8114 34.4875 37.548 37.7885C36.3088 39.0396 34.7087 39.8707 32.9727 40.1658C31.2368 40.4607 29.4521 40.2043 27.8692 39.4327C27.1129 39.0624 26.2596 38.9375 25.429 39.0759C24.5983 39.2141 23.8315 39.6085 23.2359 40.2038C24.3324 41.2978 25.6336 42.165 27.0652 42.7558C28.497 43.3467 30.0309 43.6497 31.5798 43.6475C33.1286 43.6452 34.6618 43.3378 36.0917 42.7429C37.5218 42.148 38.8206 41.2772 39.9139 40.1802C44.5042 35.5643 44.4129 28.0713 39.8099 23.4683L23.8789 7.53563ZM21.8565 34.0648L9.60316 21.8114L21.4998 9.91504L33.7531 22.1684L21.8565 34.0648Z"
+                    fill="#ffffff"
+                  />
+                </g>
+              </svg>
+              <h3 className="text-3xl font-semibold">Berita Kini</h3>
+            </div>
+            <p className="text-[#F2F2F2] text-sm">
+              © 2023 Berita Kini. All Rights Reserved.
             </p>
+            <p>Ikuti Kami</p>
+            <div className="flex gap-2">
+              <section className="flex justify-center items-center">
+                <a
+                  href="https://youtube.com"
+                  className="group flex justify-center p-2 rounded-md drop-shadow-xl from-gray-800 bg-[#E0E0E0] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.0765 0.169556H12.21C13.443 0.174056 19.6905 0.219056 21.375 0.672056C21.8842 0.810309 22.3483 1.07979 22.7207 1.45357C23.0932 1.82735 23.361 2.29233 23.4975 2.80206C23.649 3.37206 23.7555 4.12656 23.8275 4.90506L23.8425 5.06106L23.8755 5.45106L23.8875 5.60706C23.985 6.97806 23.997 8.26206 23.9985 8.54256V8.65506C23.997 8.94606 23.9835 10.3171 23.8755 11.7451L23.8635 11.9026L23.85 12.0586C23.775 12.9166 23.664 13.7686 23.4975 14.3956C23.3615 14.9055 23.0938 15.3707 22.7212 15.7445C22.3487 16.1184 21.8844 16.3877 21.375 16.5256C19.635 16.9936 13.0215 17.0266 12.105 17.0281H11.892C11.4285 17.0281 9.5115 17.0191 7.5015 16.9501L7.2465 16.9411L7.116 16.9351L6.8595 16.9246L6.603 16.9141C4.938 16.8406 3.3525 16.7221 2.622 16.5241C2.11273 16.3863 1.6486 16.1172 1.27609 15.7437C0.903575 15.3701 0.63577 14.9052 0.4995 14.3956C0.333 13.7701 0.222 12.9166 0.147 12.0586L0.135 11.9011L0.123 11.7451C0.0489714 10.7287 0.0079498 9.71012 0 8.69106L0 8.50656C0.003 8.18406 0.015 7.06956 0.096 5.83956L0.1065 5.68506L0.111 5.60706L0.123 5.45106L0.156 5.06106L0.171 4.90506C0.243 4.12656 0.3495 3.37056 0.501 2.80206C0.63704 2.29213 0.904743 1.82692 1.27727 1.45308C1.6498 1.07924 2.11405 0.809894 2.6235 0.672056C3.354 0.477056 4.9395 0.357056 6.6045 0.282056L6.8595 0.271556L7.1175 0.262556L7.2465 0.258056L7.503 0.247556C8.93056 0.201618 10.3587 0.176115 11.787 0.171056H12.0765V0.169556ZM9.6 4.98456V12.2116L15.8355 8.59956L9.6 4.98456Z"
+                      fill="#333333"
+                    />
+                  </svg>
+
+                  <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">
+                    Youtube
+                  </span>
+                </a>
+              </section>
+              <section className="flex justify-center items-center">
+                <a
+                  href="https://instagram.com"
+                  className="group flex justify-center p-2 rounded-md drop-shadow-xl from-gray-800 bg-[#E0E0E0] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+                >
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_5001_30475)">
+                      <path
+                        d="M12 0.171021C8.7435 0.171021 8.334 0.186021 7.0545 0.243021C5.775 0.303021 4.9035 0.50402 4.14 0.801021C3.33914 1.10225 2.61374 1.57476 2.0145 2.18552C1.40411 2.78506 0.931661 3.51038 0.63 4.31102C0.333 5.07302 0.1305 5.94602 0.072 7.22102C0.015 8.50352 0 8.91152 0 12.1725C0 15.4305 0.015 15.8385 0.072 17.118C0.132 18.396 0.333 19.2675 0.63 20.031C0.9375 20.82 1.347 21.489 2.0145 22.1565C2.6805 22.824 3.3495 23.235 4.1385 23.541C4.9035 23.838 5.7735 24.0405 7.0515 24.099C8.3325 24.156 8.7405 24.171 12 24.171C15.2595 24.171 15.666 24.156 16.947 24.099C18.2235 24.039 19.098 23.838 19.8615 23.541C20.6618 23.2396 21.3867 22.7671 21.9855 22.1565C22.653 21.489 23.0625 20.82 23.37 20.031C23.6655 19.2675 23.868 18.396 23.928 17.118C23.985 15.8385 24 15.4305 24 12.171C24 8.91152 23.985 8.50352 23.928 7.22252C23.868 5.94602 23.6655 5.07302 23.37 4.31102C23.0684 3.51036 22.5959 2.78503 21.9855 2.18552C21.3864 1.57453 20.661 1.10199 19.86 0.801021C19.095 0.50402 18.222 0.301521 16.9455 0.243021C15.6645 0.186021 15.258 0.171021 11.997 0.171021H12.0015H12ZM10.9245 2.33402H12.0015C15.2055 2.33402 15.585 2.34452 16.8495 2.40302C18.0195 2.45552 18.6555 2.65202 19.0785 2.81552C19.638 3.03302 20.0385 3.29402 20.4585 3.71402C20.8785 4.13402 21.138 4.53302 21.3555 5.09402C21.5205 5.51552 21.7155 6.15152 21.768 7.32152C21.8265 8.58602 21.8385 8.96552 21.8385 12.168C21.8385 15.3705 21.8265 15.7515 21.768 17.016C21.7155 18.186 21.519 18.8205 21.3555 19.2435C21.1631 19.7646 20.856 20.2357 20.457 20.622C20.037 21.042 19.638 21.3015 19.077 21.519C18.657 21.684 18.021 21.879 16.8495 21.933C15.585 21.99 15.2055 22.0035 12.0015 22.0035C8.7975 22.0035 8.4165 21.99 7.152 21.933C5.982 21.879 5.3475 21.684 4.9245 21.519C4.40325 21.3269 3.93169 21.0204 3.5445 20.622C3.14513 20.2351 2.83758 19.7635 2.6445 19.242C2.481 18.8205 2.2845 18.1845 2.232 17.0145C2.175 15.75 2.163 15.3705 2.163 12.165C2.163 8.96102 2.175 8.58302 2.232 7.31852C2.286 6.14852 2.481 5.51252 2.646 5.08952C2.8635 4.53002 3.1245 4.12952 3.5445 3.70952C3.9645 3.28952 4.3635 3.03002 4.9245 2.81252C5.3475 2.64752 5.982 2.45252 7.152 2.39852C8.259 2.34752 8.688 2.33252 10.9245 2.33102V2.33402ZM18.4065 4.32602C18.2174 4.32602 18.0301 4.36327 17.8554 4.43563C17.6807 4.508 17.522 4.61407 17.3883 4.74779C17.2545 4.8815 17.1485 5.04025 17.0761 5.21496C17.0037 5.38967 16.9665 5.57692 16.9665 5.76602C16.9665 5.95512 17.0037 6.14238 17.0761 6.31708C17.1485 6.49179 17.2545 6.65054 17.3883 6.78425C17.522 6.91797 17.6807 7.02404 17.8554 7.09641C18.0301 7.16877 18.2174 7.20602 18.4065 7.20602C18.7884 7.20602 19.1547 7.05431 19.4247 6.78425C19.6948 6.5142 19.8465 6.14793 19.8465 5.76602C19.8465 5.38411 19.6948 5.01784 19.4247 4.74779C19.1547 4.47773 18.7884 4.32602 18.4065 4.32602ZM12.0015 6.00902C11.1841 5.99627 10.3723 6.14625 9.61347 6.45023C8.85459 6.75422 8.16377 7.20613 7.58123 7.77966C6.99868 8.35318 6.53605 9.03687 6.22026 9.79091C5.90448 10.545 5.74185 11.3543 5.74185 12.1718C5.74185 12.9893 5.90448 13.7986 6.22026 14.5526C6.53605 15.3067 6.99868 15.9904 7.58123 16.5639C8.16377 17.1374 8.85459 17.5893 9.61347 17.8933C10.3723 18.1973 11.1841 18.3473 12.0015 18.3345C13.6193 18.3093 15.1623 17.6489 16.2975 16.4959C17.4326 15.3429 18.0689 13.7898 18.0689 12.1718C18.0689 10.5538 17.4326 9.00064 16.2975 7.84764C15.1623 6.69465 13.6193 6.03426 12.0015 6.00902ZM12.0015 8.17052C13.0625 8.17052 14.08 8.592 14.8303 9.34224C15.5805 10.0925 16.002 11.11 16.002 12.171C16.002 13.232 15.5805 14.2496 14.8303 14.9998C14.08 15.75 13.0625 16.1715 12.0015 16.1715C10.9405 16.1715 9.92296 15.75 9.17272 14.9998C8.42248 14.2496 8.001 13.232 8.001 12.171C8.001 11.11 8.42248 10.0925 9.17272 9.34224C9.92296 8.592 10.9405 8.17052 12.0015 8.17052Z"
+                        fill="#333333"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_5001_30475">
+                        <rect
+                          width="24"
+                          height="24"
+                          fill="white"
+                          transform="translate(0 0.171021)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">
+                    Instagram
+                  </span>
+                </a>
+              </section>
+              <section className="flex justify-center items-center">
+                <a
+                  href="https://facebook.com"
+                  className="group flex justify-center p-2 rounded-md drop-shadow-xl from-gray-800 bg-[#E0E0E0] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]"
+                >
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24.0001 12.2446C24.0001 5.57556 18.6271 0.169556 12.0001 0.169556C5.37007 0.171056 -0.00292969 5.57556 -0.00292969 12.2461C-0.00292969 18.2716 4.38607 23.2666 10.1221 24.1726V15.7351H7.07707V12.2461H10.1251V9.58356C10.1251 6.55806 11.9176 4.88706 14.6581 4.88706C15.9721 4.88706 17.3446 5.12256 17.3446 5.12256V8.09256H15.8311C14.3416 8.09256 13.8766 9.02406 13.8766 9.97956V12.2446H17.2036L16.6726 15.7336H13.8751V24.1711C19.6111 23.2651 24.0001 18.2701 24.0001 12.2446Z"
+                      fill="#333333"
+                    />
+                  </svg>
+
+                  <span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700">
+                    Facebook
+                  </span>
+                </a>
+              </section>
+            </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Kontak</h3>
+            <h3 className="text-xl font-semibold mb-4">Telusuri</h3>
             <div className="space-y-2">
               <p className="flex items-center gap-2">
-                <Phone size={18} /> (031) 99602183
+                <Link to="/" className="text-base">
+                  Beranda
+                </Link>
               </p>
               <p className="flex items-center gap-2">
-                <Mail size={18} /> smptpigedangan@gmail.com
+                <Link to="/about" className="text-base">
+                  Terbaru
+                </Link>
               </p>
               <p className="flex items-center gap-2">
-                <MapPin size={18} /> Jln. R Kanjeng Jimat, Kecamatan Gedangan,
-                Kabupaten Sidoarjo, Jawa Timur.
+                <Link to="/news" className="text-base">
+                  Hiburan
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/contact" className="text-base">
+                  Gaya Hidup
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/contact" className="text-base">
+                  Olahraga
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/contact" className="text-base">
+                  Nasional
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/contact" className="text-base">
+                  Internasional
+                </Link>
               </p>
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Jam Operasional</h3>
-            <p>Senin - Jumat: 07:00 - 15:00</p>
-            <p>Sabtu - Minggu: Libur</p>
+            <h3 className="text-xl font-semibold mb-4">Bantuan</h3>
+            <div className="space-y-2">
+              <p className="flex items-center gap-2">
+                <Link to="/kontak-kami" className="text-base">
+                  Kontak Kami
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/laporan-pembajakan" className="text-base">
+                  Laporan Pembajakan
+                </Link>
+              </p>
+              <p className="flex items-center gap-2">
+                <Link to="/kebijakan" className="text-base">
+                  Kebijakan
+                </Link>
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-green-700 text-center">
-          <p>
-            &copy; 2024 <a href="https://aisyahlailia.netlify.app/">ALS</a> with{" "}
-            <a href="https://www.instagram.com/km8_smptpigedangan/">
-              KM 8 SMP TPI Gedangan
-            </a>
-            . All rights reserved.
-          </p>
+          <div>
+            <h3 className="text-xl font-semibold mb-4">
+              Berlangganan Berita Terbaru
+            </h3>
+            <div className="relative bg-gray-100 rounded-2xl shadow-md p-1.5 transition-all duration-150 ease-in-out hover:scale-105 hover:shadow-lg">
+              <input
+                type="text"
+                className="w-full pl-2 p-2 text-base text-gray-700 bg-transparent rounded-lg focus:outline-none"
+                placeholder="Masukkan Email"
+              />
+              <button className="absolute right-1 top-1 bottom-1 px-3 bg-[#0090FF] text-white font-medium rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5044e4]">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.9461 1.02895C24.0007 0.892657 24.0141 0.743347 23.9846 0.599533C23.9551 0.455718 23.884 0.323724 23.7802 0.219914C23.6764 0.116105 23.5444 0.0450444 23.4006 0.0155432C23.2568 -0.013958 23.1074 -0.00060275 22.9711 0.0539533L1.15065 8.78245H1.14915L0.471148 9.05245C0.342733 9.10368 0.230976 9.1894 0.148222 9.30015C0.0654668 9.4109 0.0149351 9.54237 0.00220827 9.68004C-0.0105185 9.8177 0.0150548 9.95621 0.0761036 10.0803C0.137152 10.2043 0.2313 10.3091 0.348148 10.383L0.963148 10.773L0.964648 10.776L8.45715 15.543L13.2241 23.0355L13.2271 23.0385L13.6171 23.6535C13.6913 23.7699 13.7961 23.8635 13.92 23.9242C14.044 23.9849 14.1823 24.0102 14.3197 23.9973C14.4571 23.9844 14.5883 23.9339 14.6988 23.8512C14.8093 23.7686 14.8949 23.6571 14.9461 23.529L23.9461 1.02895ZM21.1966 3.86395L9.95565 15.105L9.63315 14.598C9.57406 14.5049 9.49519 14.426 9.40215 14.367L8.89515 14.0445L20.1361 2.80345L21.9031 2.09695L21.1966 3.86395Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
