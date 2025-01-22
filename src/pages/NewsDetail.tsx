@@ -59,7 +59,7 @@ export default function NewsDetail() {
       id: 1,
       name: "UJANG YUSMEIDI S.P., M.Agr.",
       date: "28 Mar 2024 11:15",
-      profileImg: "/assets/profile2.png",
+      profileImg: "https://i.imgur.com/ZphOQn2.png",
       message:
         "Mohon maaf, apakah sertifikatnya sudah tidak dapat diunduh? Karena saya mau download ada konfirmasi bahwa TOTP aktivasi salah. Bagaimana ya solusinya?",
     },
@@ -83,7 +83,7 @@ export default function NewsDetail() {
           hour: "2-digit",
           minute: "2-digit",
         }),
-        profileImg: "/assets/profile1.png", // Default gambar profil
+        profileImg: "https://i.imgur.com/Xw8VhSs.png", // Default gambar profil
         message: newComment,
       },
     ]);
@@ -242,7 +242,7 @@ export default function NewsDetail() {
                   </div>
                   <div className="flex gap-5 ml-16 my-6">
                     <img
-                      src="/assets/profile3.png"
+                      src="https://i.imgur.com/SxNNdfu.png"
                       alt=""
                       className="w-16 h-16"
                     />
@@ -366,7 +366,7 @@ export default function NewsDetail() {
                         <p className="text-white ">1</p>
                       </div>
                       <img
-                        src="/assets/berita1.png"
+                        src="https://i.imgur.com/3AcZSB8.png"
                         alt=""
                         className="w-full h-full"
                       />
@@ -397,7 +397,7 @@ export default function NewsDetail() {
                         <p className="text-white ">2</p>
                       </div>
                       <img
-                        src="/assets/berita2.png"
+                        src="https://i.imgur.com/UaoQULz.png"
                         alt=""
                         className="w-full h-full"
                       />
@@ -428,7 +428,7 @@ export default function NewsDetail() {
                         <p className="text-white ">3</p>
                       </div>
                       <img
-                        src="/assets/berita3.png"
+                        src="https://i.imgur.com/rXV2wPq.png"
                         alt=""
                         className="w-full h-full"
                       />

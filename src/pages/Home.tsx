@@ -80,7 +80,7 @@ export default function Home() {
                     <p className="text-white ">1</p>
                   </div>
                   <img
-                    src="public/assets/berita1.png"
+                    src="https://i.imgur.com/3AcZSB8.png"
                     alt=""
                     className="w-full h-full"
                   />
@@ -111,7 +111,7 @@ export default function Home() {
                     <p className="text-white ">2</p>
                   </div>
                   <img
-                    src="public/assets/berita2.png"
+                    src="https://i.imgur.com/UaoQULz.png"
                     alt=""
                     className="w-full h-full"
                   />
@@ -142,7 +142,7 @@ export default function Home() {
                     <p className="text-white ">3</p>
                   </div>
                   <img
-                    src="public/assets/berita3.png"
+                    src="https://i.imgur.com/rXV2wPq.png"
                     alt=""
                     className="w-full h-full"
                   />
@@ -240,7 +240,7 @@ export default function Home() {
                 }
               >
                 <img
-                  src={`public/assets/carousel.png`}
+                  src={`https://i.imgur.com/b3NWbNU.png`}
                   className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                   alt={`Slide ${index + 1}`}
                 />
