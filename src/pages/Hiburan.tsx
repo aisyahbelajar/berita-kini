@@ -20,14 +20,15 @@ const formatDate = (dateString: string): string => {
   return formatter.format(date);
 };
 
-export default function News() {
+export default function Hiburan() {
   const { posts, setPosts } = usePosts();
+  const { nama, setNama } = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api-berita-indonesia.vercel.app/cnbc/terbaru/"
+          " https://api-berita-indonesia.vercel.app/cnn/hiburan/"
         );
         const data = await response.json();
         setPosts(data.data.posts);
@@ -43,10 +44,11 @@ export default function News() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api-berita-indonesia.vercel.app/cnbc/terbaru/"
+          " https://api-berita-indonesia.vercel.app/"
         );
         const data = await response.json();
-        setPosts(data.data.posts);
+        setNama(data.data.nama);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching news:", error);
       }
@@ -54,6 +56,8 @@ export default function News() {
 
     fetchData();
   }, []);
+
+  // Pagination
 
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -91,7 +95,7 @@ export default function News() {
               />
             </svg>
             <h1 className="font-bold text-black text-2xl capitalize mb-6">
-              Rekomendasi Untuk Anda
+              Hiburan
             </h1>
           </div>
           <div className="relative rounded-lg p-1 transition-all duration-150 ease-in-out hover:scale-105 border mb-6">
@@ -136,7 +140,7 @@ export default function News() {
                 </h3>
                 <div className="flex gap-3">
                   <p className="text-blue-700 text-base font-semibold">
-                    Terbaru
+                    Hiburan
                   </p>
                   <div className="w-1 h-1 rounded-full bg-gray-300 my-auto"></div>
                   <p>{formatDate(post.pubDate)}</p>

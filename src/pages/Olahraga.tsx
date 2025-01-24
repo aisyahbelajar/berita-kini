@@ -20,30 +20,14 @@ const formatDate = (dateString: string): string => {
   return formatter.format(date);
 };
 
-export default function News() {
+export default function Olahraga() {
   const { posts, setPosts } = usePosts();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api-berita-indonesia.vercel.app/cnbc/terbaru/"
-        );
-        const data = await response.json();
-        setPosts(data.data.posts);
-      } catch (error) {
-        console.error("Error fetching news:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://api-berita-indonesia.vercel.app/cnbc/terbaru/"
+          "https://api-berita-indonesia.vercel.app/cnn/olahraga/"
         );
         const data = await response.json();
         setPosts(data.data.posts);
@@ -91,7 +75,7 @@ export default function News() {
               />
             </svg>
             <h1 className="font-bold text-black text-2xl capitalize mb-6">
-              Rekomendasi Untuk Anda
+              Olahraga
             </h1>
           </div>
           <div className="relative rounded-lg p-1 transition-all duration-150 ease-in-out hover:scale-105 border mb-6">
@@ -136,7 +120,7 @@ export default function News() {
                 </h3>
                 <div className="flex gap-3">
                   <p className="text-blue-700 text-base font-semibold">
-                    Terbaru
+                    Olahraga
                   </p>
                   <div className="w-1 h-1 rounded-full bg-gray-300 my-auto"></div>
                   <p>{formatDate(post.pubDate)}</p>

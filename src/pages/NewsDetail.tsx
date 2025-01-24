@@ -5,15 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import usePosts from "../lib/posts.ts";
 import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
-import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -32,15 +23,15 @@ const formatDate = (dateString: string): string => {
 };
 
 export default function NewsDetail() {
-  const { id } = useParams(); // Mendapatkan ID dari URL
-  const { posts } = usePosts(); // Mengakses data berita
-  const post = posts[parseInt(id)]; // Mencari berita berdasarkan ID
+  const { id } = useParams();
+  const { posts } = usePosts();
+  const post = posts[parseInt(id)];
 
   const news = newsData.find((n) => n.id === Number(id));
 
   if (!news) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto md:px-4 md:py-16">
         <p>Berita tidak ditemukan</p>
       </div>
     );
@@ -64,18 +55,17 @@ export default function NewsDetail() {
         "Mohon maaf, apakah sertifikatnya sudah tidak dapat diunduh? Karena saya mau download ada konfirmasi bahwa TOTP aktivasi salah. Bagaimana ya solusinya?",
     },
   ]);
-  const [newComment, setNewComment] = useState(""); // Untuk input komentar baru
+  const [newComment, setNewComment] = useState("");
 
-  // Fungsi untuk menambah komentar baru
   const handleAddComment = () => {
-    if (newComment.trim() === "") return; // Validasi input kosong
+    if (newComment.trim() === "") return;
     const newId = comments.length + 1;
 
     setComments([
       ...comments,
       {
         id: newId,
-        name: "Pengguna Baru", // Anda bisa mengganti ini dengan data pengguna yang login
+        name: "Pengguna Baru",
         date: new Date().toLocaleString("id-ID", {
           day: "2-digit",
           month: "short",
@@ -83,11 +73,11 @@ export default function NewsDetail() {
           hour: "2-digit",
           minute: "2-digit",
         }),
-        profileImg: "https://i.imgur.com/Xw8VhSs.png", // Default gambar profil
+        profileImg: "https://i.imgur.com/Xw8VhSs.png",
         message: newComment,
       },
     ]);
-    setNewComment(""); // Reset input
+    setNewComment("");
   };
 
   return (
@@ -95,8 +85,8 @@ export default function NewsDetail() {
       <div className="md:grid md:grid-cols-4">
         <div className="col-span-3">
           {/* breadcrumb */}
-          <div className="py-20">
-            <div className="px-4">
+          <div className="pt-20 pb-10">
+            <div className="md:px-4 ">
               <div className="w-full h-9"></div>
 
               <h1 className="text-4xl font-bold text-black text-left flex gap-3 ml-6">
@@ -136,7 +126,7 @@ export default function NewsDetail() {
           </div>
           {/* content berita */}
           <div className="">
-            <div className="max-w-4xl px-10">
+            <div className="max-w-4xl md:px-10 px-4">
               <h2 className="font-semibold text-4xl mb-8">{post.title}</h2>
               <div className="flex gap-3 mb-6">
                 <p className="text-blue-700 text-base font-semibold">
@@ -161,7 +151,7 @@ export default function NewsDetail() {
           </div>
           {/* KOMENTAR */}
           <div>
-            <div className="flex gap-5 mx-10 mt-12">
+            <div className="flex gap-5 md:mx-10 mx-4 mt-12">
               <svg
                 width="4"
                 height="35"
@@ -181,7 +171,7 @@ export default function NewsDetail() {
                 Komentar
               </h1>
             </div>
-            <div className="max-w-4xl px-10">
+            <div className="max-w-4xl md:px-10 px-4">
               {/* Formulir Komentar */}
               <div className="p-4">
                 <div className="flex gap-5">
@@ -279,7 +269,7 @@ export default function NewsDetail() {
           </div>
 
           {/* berita lain */}
-          <div className="py-16">
+          <div className="md:py-16">
             <div className=" px-4">
               <div className="flex gap-5 ">
                 <svg
@@ -302,19 +292,19 @@ export default function NewsDetail() {
                 </h1>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
-                {posts.slice(0, 3).map((post, index) => (
+                {posts.slice(1, 4).map((post, index) => (
                   <Link
-                    to={`/news/${index}`}
-                    key={index}
-                    className="bg-white rounded-lg  overflow-hidden hover:shadow-xl transition "
+                    to={`/news/${index + 1}`}
+                    key={index + 1}
+                    className="bg-white rounded-lg overflow-hidden hover:shadow-xl transition"
                   >
                     <img
                       src={post.thumbnail}
                       alt={post.description}
-                      className="w-auto h-48 object-cover rounded-lg"
+                      className="w-full h-48 object-cover rounded-lg"
                     />
                     <div className="p-6">
-                      <h3 className="text-base font-bold  mb-2 text-start">
+                      <h3 className="text-base font-bold mb-2 text-start">
                         {post.title}
                       </h3>
                       <div className="flex gap-3">
@@ -333,7 +323,7 @@ export default function NewsDetail() {
           </div>
         </div>
         {/* BERITA LAINNYA */}
-        <div className="w-full py-20">
+        <div className="w-full md:py-20">
           <div className="py-16 ">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-start mb-12">
@@ -388,7 +378,6 @@ export default function NewsDetail() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-1 h-32 bg-gray-300 my-auto"></div>
                 </div>
                 <div className="static text-center transform transition-transform duration-300 hover:scale-105 flex gap-4">
                   <div className="rounded-full w-4/5">
@@ -419,7 +408,6 @@ export default function NewsDetail() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-1 h-32 bg-gray-300 my-auto"></div>
                 </div>
                 <div className="static text-center transform transition-transform duration-300 hover:scale-105 flex gap-4">
                   <div className="rounded-full w-4/5">
