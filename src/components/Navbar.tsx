@@ -87,7 +87,7 @@ export default function Navbar() {
                 Beranda
               </Link>
               <Link
-                to="/about"
+                to="/news"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -95,7 +95,7 @@ export default function Navbar() {
                 Terbaru
               </Link>
               <Link
-                to="/news"
+                to="/hiburan"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -103,7 +103,7 @@ export default function Navbar() {
                 Hiburan
               </Link>
               <Link
-                to="/contact"
+                to="/gaya-hidup"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -111,7 +111,7 @@ export default function Navbar() {
                 Gaya Hidup
               </Link>
               <Link
-                to="/contact"
+                to="/olahraga"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -119,7 +119,7 @@ export default function Navbar() {
                 Olahraga
               </Link>
               <Link
-                to="/contact"
+                to="/nasional"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -127,7 +127,7 @@ export default function Navbar() {
                 Nasional
               </Link>
               <Link
-                to="/contact"
+                to="/internasional"
                 className={`text-base transition-colors duration-300 ${
                   scrolled ? "text-white" : "text-[#828282]"
                 }`}
@@ -165,6 +165,51 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Terbaru
+            </Link>
+            <Link
+              to="/hiburan"
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Hiburan
+            </Link>
+            <Link
+              to="/contact"
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Gaya Hidup
+            </Link>
+            <Link
+              to="/contact"
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Olahraga
+            </Link>
+            <Link
+              to="/contact"
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Nasional
+            </Link>
+            <Link
+              to="/contact"
+              className={`block px-3 py-2 ${
+                scrolled ? "text-white" : "text-[#828282]"
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Internasional
             </Link>
           </div>
         </div>
